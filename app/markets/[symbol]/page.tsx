@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
+import Image from "next/image";
 import { ArrowLeft, TrendingUp, TrendingDown, DollarSign, Activity } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -36,9 +37,11 @@ export default function MarketDetailPage() {
           </Link>
           <div className="flex items-center gap-3">
             <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/20 to-purple-500/20 border border-white/10 flex items-center justify-center overflow-hidden shrink-0">
-              <img 
+              <Image 
                 src={`https://assets.coincap.io/assets/icons/${symbol?.replace("USDT", "").toLowerCase()}@2x.png`}
-                alt={symbol}
+                alt={symbol || 'crypto'}
+                width={32}
+                height={32}
                 className="w-8 h-8 object-contain"
                 onError={(e) => {
                   e.currentTarget.style.display = 'none';

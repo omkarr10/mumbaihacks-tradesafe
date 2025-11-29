@@ -37,11 +37,11 @@ export async function GET(request: NextRequest) {
         simulationState.indianDriftOverride = driftValue;
         changes.push(`Indian drift set to ${(driftValue * 100).toFixed(2)}%`);
         
-        // Update settings
+        // Update settings for Indian exchange
         updateSettings({
-          mockExchanges: {
-            ...getSettings().mockExchanges,
-            indianDrift: driftValue
+          indianExchange: {
+            ...getSettings().indianExchange,
+            priceDriftPercent: driftValue
           }
         });
       }
@@ -130,8 +130,4 @@ export async function POST(request: NextRequest) {
       { status: 500 }
     );
   }
-}
-
-export function getSimulationState() {
-  return { ...simulationState };
 }

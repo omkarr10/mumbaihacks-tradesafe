@@ -58,7 +58,7 @@ export async function POST(request: NextRequest) {
       },
       decision: {
         outcome: allocation.allocatedUSDT > 0 ? 'Allocated' : 'Rejected',
-        reasoning: allocation.reasoning,
+        reasoning: allocation.reason,
         confidence: 1.0
       }
     });

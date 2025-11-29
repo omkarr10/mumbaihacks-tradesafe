@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { ArrowUpRight, ArrowDownRight, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useFetchMarketData } from "@/hooks/useMarketData";
@@ -59,9 +60,11 @@ const MarketOverview = () => {
                   <td className="px-6 py-4 font-medium text-white">
                     <Link href={`/markets/${market.symbol}`} className="flex items-center gap-3 hover:text-blue-400 transition-colors">
                       <div className="w-8 h-8 rounded-full bg-zinc-800 flex items-center justify-center overflow-hidden shrink-0">
-                        <img 
+                        <Image 
                           src={market.image}
                           alt={market.symbol}
+                          width={32}
+                          height={32}
                           className="w-full h-full object-cover"
                           onError={(e) => {
                             e.currentTarget.style.display = 'none';

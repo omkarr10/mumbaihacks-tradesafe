@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import {
   Table,
   TableBody,
@@ -35,9 +36,11 @@ const AssetsTable = ({ balance }) => {
               >
                 <TableCell className="p-2 text-gray-600 border border-gray-300">
                   <div className="flex flex-row justify-start items-center gap-3">
-                    <img
+                    <Image
                       src={row.image}
                       alt={row.name}
+                      width={20}
+                      height={20}
                       className="w-5 h-5 object-contain"
                     />
                     <p>{row.asset}</p>

@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import {
   Card,
   CardContent,
@@ -16,9 +17,11 @@ const MarketCard = ({ marketData }) => {
         <Card key={crypto.symbol} className="shadow-lg rounded-lg p-4 w-[380px]">
           <Link href={`/markets/${crypto.symbol}`}>
             <CardHeader className="flex flex-row items-center p-0 mb-3 gap-4">
-              <img
+              <Image
                 src={crypto.image}
                 alt={crypto.name}
+                width={48}
+                height={48}
                 className="w-12 h-12 object-contain"
               />
              <div className="flex flex-col items-start gap-1">

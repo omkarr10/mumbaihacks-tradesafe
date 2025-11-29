@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Zap, Shield, Bot, TrendingUp, Activity, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -55,7 +56,7 @@ export default function LandingPage() {
             </h1>
             
             <p className="text-xl text-zinc-400 max-w-lg leading-relaxed">
-              The world's first multi-agent arbitrage platform. Detect, analyze, and execute profitable trades across exchanges in milliseconds.
+              The world&apos;s first multi-agent arbitrage platform. Detect, analyze, and execute profitable trades across exchanges in milliseconds.
             </p>
             
             <div className="flex flex-wrap items-center gap-4">
@@ -95,7 +96,7 @@ export default function LandingPage() {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full bg-orange-500/20 flex items-center justify-center">
-                      <img src="/btc.png" alt="BTC" />
+                      <Image src="/btc.png" alt="BTC" width={40} height={40} />
                     </div>
                     <div>
                       <p className="font-bold">Bitcoin</p>
@@ -139,7 +140,7 @@ export default function LandingPage() {
                   </div>
                 </div>
                 <p className="text-xs text-zinc-300 leading-relaxed">
-                  "Arbitrage opportunity confirmed. Risk level low. Executing trade sequence."
+                  &quot;Arbitrage opportunity confirmed. Risk level low. Executing trade sequence.&quot;
                 </p>
               </div>
             </div>

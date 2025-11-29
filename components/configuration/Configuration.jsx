@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 import {
   Card,
   CardContent,
@@ -76,9 +77,11 @@ const ConfigurationCards = ({ data: initialData }) => {
         <Card key={item._id} className="shadow-lg rounded-lg w-[390px]">
           <CardHeader className="flex flex-row items-center gap-4 justify-between">
             <div className="flex items-center gap-3">
-              <img
+              <Image
                 src={item.image}
                 alt={item.base}
+                width={40}
+                height={40}
                 className="w-10 h-10 object-contain"
               />
               <div>

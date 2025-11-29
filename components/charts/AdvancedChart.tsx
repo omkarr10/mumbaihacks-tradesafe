@@ -10,6 +10,7 @@ const AdvancedChart = ({ data, symbol }) => {
   const { theme } = useLayout();
   const [chartType, setChartType] = useState("candle_solid");
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (!chartContainerRef.current) return;
 
@@ -37,7 +38,10 @@ const AdvancedChart = ({ data, symbol }) => {
     }
 
     return () => {
-      dispose(chartContainerRef.current);
+      const currentContainer = chartContainerRef.current;
+      if (currentContainer) {
+        dispose(currentContainer);
+      }
     };
   }, [theme]);
 

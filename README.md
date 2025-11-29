@@ -179,4 +179,4 @@ When facing complex trading decisions, agents can enter a debate mode where:
 
 ---
 
-**TradeSafe** - *Intelligent Arbitrage, Automated by AI*
+*TradeSafe** - *Intelligent Arbitrage, Automated by AI*
